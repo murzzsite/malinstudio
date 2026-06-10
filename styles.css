@@ -699,20 +699,22 @@ input, textarea, select { font: inherit; outline: none; }
 }
 .social-link:hover { border-color: var(--pink); transform: translate(-2px, -2px); }
 .social-link__icon {
-  width: 36px;
-  height: 36px;
-  border: 1.5px solid #333;
+  width: 42px;
+  height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
 }
-.social-link__icon--tg { color: #34aadf; }
-.social-link__icon--ig { color: #e1306c; }
-.social-link__icon--vk { color: #4c75a3; }
-.social-link__icon--tc { color: var(--pink); }
-.social-link__icon--dz { color: #bbb; }
-.social-link__icon--sk { color: #4ec56e; }
+.social-link__icon--tg { background: #2CA5E0; border-radius: 50%; }
+.social-link__icon--ig { background: linear-gradient(135deg, #405DE6 0%, #833AB4 30%, #dc2743 60%, #f77737 85%, #FCAF45 100%); border-radius: 10px; }
+.social-link__icon--vk { background: #0077FF; border-radius: 10px; }
+.social-link__icon--tc { background: #1B1B1F; border-radius: 12px; }
+.social-link__icon--dz { background: #0A0A0A; border-radius: 50%; border: 1.5px solid #333; }
+.social-link__icon--sk { background: #00B956; border-radius: 10px; }
 .social-link__label { font-size: 10px; color: #666; font-weight: 500; margin-bottom: 1px; text-transform: uppercase; letter-spacing: 0.04em; }
 .social-link__val { font-size: 13px; font-weight: 600; color: var(--white); }
 
@@ -763,22 +765,29 @@ input, textarea, select { font: inherit; outline: none; }
 .footer__copy { font-size: 12px; color: #555; text-transform: uppercase; letter-spacing: 0.04em; }
 
 /* ============================
-   FAB
+   SCROLL TO TOP
    ============================ */
-.fab-group { position: fixed; bottom: 28px; right: 24px; z-index: 50; }
 .fab {
+  position: fixed;
+  bottom: 28px;
+  right: 24px;
+  z-index: 50;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 54px;
   height: 54px;
   border: var(--border);
-  background: var(--pink);
+  background: var(--black);
   color: var(--white);
   box-shadow: var(--shadow);
-  transition: transform 0.15s, box-shadow 0.15s;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s, opacity 0.25s, visibility 0.25s;
+  opacity: 0;
+  visibility: hidden;
 }
-.fab:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 var(--black); }
+.fab.is-visible { opacity: 1; visibility: visible; }
+.fab:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 var(--pink); }
 
 /* ============================
    REVEAL
@@ -832,4 +841,59 @@ input, textarea, select { font: inherit; outline: none; }
 @media (max-width: 380px) {
   .hero__actions { flex-direction: column; }
   .logo__suffix { display: none; }
+}
+
+/* ============================
+   ADAPTIVE FIXES
+   ============================ */
+@media (max-width: 640px) {
+  /* Stats: 3 in a row instead of column */
+  .hero__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    border: var(--border);
+    box-shadow: var(--shadow);
+    flex-direction: unset;
+    gap: 0;
+  }
+  .stat {
+    border-right: var(--border);
+    border-bottom: none;
+    margin-bottom: 0;
+    padding: 12px 8px;
+  }
+  .stat:last-child { border-right: none; }
+  .stat__num { font-size: 20px; }
+  .stat__label { font-size: 10px; }
+  /* Hero card full width */
+  .hero__card { width: 100%; }
+  /* Section header */
+  .section-header h2 { font-size: 28px; }
+  /* Service item price row */
+  .service-item__price { font-size: 20px; }
+}
+
+@media (max-width: 480px) {
+  .hero__title { font-size: 44px; }
+  .section-header h2 { font-size: 26px; }
+  .container { padding: 0 16px; }
+  .service-item { padding: 18px 16px; }
+  .service-item__left { gap: 12px; }
+  .service-item__num { font-size: 32px; }
+  .form { padding: 24px 18px; }
+  .what__grid { gap: 12px; }
+  .process__steps { gap: 12px; }
+  .fab { bottom: 20px; right: 16px; width: 48px; height: 48px; }
+  /* Footer stacked */
+  .footer__logo { gap: 10px; }
+  .footer__links { gap: 12px; }
+  .footer__docs { gap: 10px; }
+}
+
+@media (max-width: 360px) {
+  .hero__title { font-size: 36px; }
+  .logo__name { font-size: 13px; }
+  .btn--lg { padding: 13px 22px; font-size: 14px; }
+  .contact__inner { gap: 32px; }
 }

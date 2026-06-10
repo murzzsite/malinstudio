@@ -93,7 +93,16 @@
   }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
   targets.forEach(el => io.observe(el));
 
-  // Waveform animation on hover
+  const scrollTopBtn = document.getElementById('scrollTop');
+  if (scrollTopBtn) {
+    window.addEventListener('scroll', () => {
+      scrollTopBtn.classList.toggle('is-visible', window.scrollY > 400);
+    }, { passive: true });
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
   const wfBars = document.querySelectorAll('.wf-bars span');
   let wfInterval = null;
   const wf = document.querySelector('.hero__waveform');
