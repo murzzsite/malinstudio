@@ -20,7 +20,7 @@
   --radius-sm: 10px;
   --radius-lg: 24px;
   --font-body: 'Inter', sans-serif;
-  --font-heading: 'Syne', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
   --transition: 0.25s ease;
 }
 
@@ -478,10 +478,6 @@ input, textarea, select { font: inherit; outline: none; border: none; background
   margin-bottom: 16px;
   position: relative;
 }
-.process-step__num::after {
-  content: attr(class);
-  position: absolute;
-}
 .process-step h4 { font-size: 16px; font-weight: 700; margin-bottom: 10px; }
 .process-step p { font-size: 14px; color: var(--text-2); line-height: 1.65; }
 .process-step__line { display: none; }
@@ -559,6 +555,10 @@ input, textarea, select { font: inherit; outline: none; border: none; background
 .form__group input:focus, .form__group textarea:focus, .form__group select:focus { border-color: var(--accent); }
 .form__group textarea { resize: vertical; min-height: 100px; }
 .form__note { font-size: 12px; color: var(--text-3); text-align: center; margin-top: 12px; line-height: 1.5; }
+.form__consent { margin-top: 4px; }
+.consent-label { display: flex; align-items: flex-start; gap: 10px; cursor: pointer; font-size: 13px; color: var(--text-2); line-height: 1.5; }
+.consent-label input[type="checkbox"] { width: 16px; height: 16px; margin-top: 2px; flex-shrink: 0; accent-color: var(--accent); cursor: pointer; }
+.consent-label a { color: var(--accent); text-decoration: underline; }
 
 .contact__right { display: flex; flex-direction: column; gap: 24px; }
 .contact__cta-block {
