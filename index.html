@@ -7,7 +7,7 @@
   <meta name="description" content="Песня под ключ от идеи до чартов. Сведение и мастеринг. Музыка для фильмов, игр и рилс. Аранжировки и биты. Продюсер @malinstu.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Russo+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,7 +16,7 @@
 <header class="header" id="header">
   <div class="container header__inner">
     <a class="logo" href="#">
-      <img src="logo.jpg" alt="MALIN STUDIO logo" style="height:44px;width:auto;mix-blend-mode:multiply;">
+      <img class="logo__img" src="logo.jpg" alt="MALIN STUDIO">
       <div>
         <span class="logo__name">MALIN STUDIO</span>
         <span class="logo__suffix">music production</span>
@@ -39,48 +39,55 @@
 
 <!-- HERO -->
 <section class="hero" id="about">
-  <div class="hero__wave" aria-hidden="true">
-    <svg viewBox="0 0 1200 200" preserveAspectRatio="none">
-      <path d="M0,100 C150,20 350,180 600,100 C850,20 1050,180 1200,100 L1200,200 L0,200 Z" fill="currentColor"/>
-    </svg>
-  </div>
-  <div class="container hero__inner">
+  <!-- декоративные элементы -->
+  <span class="deco" style="top:12%;left:2%;font-size:36px;transform:rotate(-15deg);">✦</span>
+  <span class="deco deco--pink" style="top:8%;right:5%;font-size:22px;transform:rotate(20deg);">◆</span>
+  <span class="deco deco--outline" style="bottom:15%;left:5%;font-size:56px;opacity:.15;">♪</span>
+  <span class="deco deco--pink" style="bottom:20%;right:3%;font-size:18px;transform:rotate(-10deg);">✦</span>
+  <span class="deco" style="top:50%;left:45%;font-size:14px;opacity:.2;">×</span>
+
+  <div class="container hero__grid">
     <div class="hero__text">
       <div class="hero__label">
-        <span class="hero__label-eq">
+        <div class="hero__label-eq">
           <span></span><span></span><span></span><span></span><span></span>
-        </span>
-        Продюсер · Сонграйтер · Звукорежиссёр
+        </div>
+        <span class="sticker">Продюсер · Сонграйтер · Звукорежиссёр</span>
       </div>
-      <h1 class="hero__title">От идеи<br>до <em>чартов</em></h1>
+
+      <h1 class="hero__title">
+        ОТ ИДЕИ<br>
+        ДО <span class="pink">ЧАРТОВ</span>
+      </h1>
+
       <p class="hero__sub">Пишу музыку, тексты, делаю сведение и мастеринг, выпускаю на площадки и продвигаю до плейлистов. Полный цикл — один специалист от идеи до релиза.</p>
+
       <div class="hero__actions">
-        <a href="#leadForm" class="btn btn--primary btn--lg">Обсудить проект</a>
-        <a href="#services" class="btn btn--ghost">Смотреть услуги</a>
+        <a href="#leadForm" class="btn btn--pink btn--lg">Обсудить проект</a>
+        <a href="#services" class="btn btn--outline btn--lg">Смотреть услуги</a>
       </div>
+
       <div class="hero__stats">
         <div class="stat">
           <span class="stat__num">5</span>
-          <span class="stat__label">услуг в каталоге</span>
+          <span class="stat__label">услуг</span>
         </div>
-        <div class="stat stat--div"></div>
         <div class="stat">
           <span class="stat__num">от 3 990</span>
-          <span class="stat__label">рублей за трек</span>
+          <span class="stat__label">рублей</span>
         </div>
-        <div class="stat stat--div"></div>
         <div class="stat">
           <span class="stat__num">360°</span>
           <span class="stat__label">от идеи до релиза</span>
         </div>
       </div>
     </div>
+
     <div class="hero__visual">
       <div class="hero__card">
         <div class="hero__card-top">
-          <div class="hero__ava" style="background:#fff;">
-            <img src="logo.jpg" alt="MALIN STUDIO" style="width:40px;height:40px;object-fit:contain;mix-blend-mode:multiply;">
-            <div class="hero__ava-pulse"></div>
+          <div class="hero__ava">
+            <img src="logo.jpg" alt="MALIN STUDIO">
           </div>
           <div>
             <div class="hero__card-name">MALIN STUDIO</div>
@@ -108,93 +115,97 @@
           <span>Биты</span>
           <span>Релиз</span>
         </div>
-        <a href="#leadForm" class="btn btn--primary btn--full">Заказать трек</a>
+        <a href="#leadForm" class="btn btn--pink btn--full">Заказать трек →</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ЧТО ДЕЛАЮ -->
+<!-- ЧТО ДЕЛАЮ (тёмный) -->
 <section class="what" id="what">
+  <span class="deco deco--pink" style="top:10%;right:3%;font-size:80px;opacity:.05;">♫</span>
+  <span class="deco" style="bottom:10%;left:2%;font-size:60px;opacity:.05;color:#fff;">✦</span>
   <div class="container">
     <div class="section-header">
-      <div class="section-tag">Специализация</div>
-      <h2>Полный цикл производства музыки</h2>
-      <p>Не просто запись — я веду проект от первой ноты до попадания в плейлист</p>
+      <div class="section-tag section-tag--pink">Специализация</div>
+      <h2 style="color:#fff;">Полный цикл<br>производства музыки</h2>
+      <p style="color:#888;">Не просто запись — я веду проект от первой ноты до попадания в плейлист</p>
     </div>
     <div class="what__grid">
-      <div class="what-card">
+      <div class="what-card reveal">
         <div class="what-card__num">01</div>
         <div class="what-card__icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <h4>Написание песни</h4>
-        <p>Создаю музыку и тексты с нуля. Работаю в любом жанре — от поп до электронки. Улавливаю идею и превращаю в готовый трек.</p>
+        <p>Создаю музыку и тексты с нуля. Работаю в любом жанре — от поп до электронки.</p>
       </div>
-      <div class="what-card">
+      <div class="what-card reveal">
         <div class="what-card__num">02</div>
         <div class="what-card__icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 18.5a6.5 6.5 0 100-13 6.5 6.5 0 000 13z" stroke="currentColor" stroke-width="1.8"/><path d="M12 14a2 2 0 100-4 2 2 0 000 4z" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 18.5a6.5 6.5 0 100-13 6.5 6.5 0 000 13z" stroke="currentColor" stroke-width="1.8"/><path d="M12 14a2 2 0 100-4 2 2 0 000 4z" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
         </div>
         <h4>Аранжировка и продюсирование</h4>
-        <p>Строю инструментальную основу, которая подчёркивает вокал и создаёт нужную атмосферу. Минусы, биты, оркестровки.</p>
+        <p>Строю инструментальную основу, которая подчёркивает вокал и создаёт нужную атмосферу.</p>
       </div>
-      <div class="what-card">
+      <div class="what-card reveal">
         <div class="what-card__num">03</div>
         <div class="what-card__icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M9 17H5a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3M13 21l4-4m0 0l4-4m-4 4l-4-4m4 4V11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 17H5a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3M13 21l4-4m0 0l4-4m-4 4l-4-4m4 4V11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <h4>Сведение и мастеринг</h4>
         <p>Профессиональный микс и мастеринг до стандартов стриминговых площадок. Громко, чисто, динамично.</p>
       </div>
-      <div class="what-card">
+      <div class="what-card reveal">
         <div class="what-card__num">04</div>
         <div class="what-card__icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
         </div>
         <h4>Выпуск на площадки</h4>
-        <p>Дистрибьюция на Spotify, Apple Music, ВК Музыку, Яндекс.Музыку и другие платформы. Со всеми метаданными и обложками.</p>
+        <p>Дистрибьюция на Spotify, Apple Music, ВК Музыку, Яндекс.Музыку и другие платформы.</p>
       </div>
-      <div class="what-card">
+      <div class="what-card reveal">
         <div class="what-card__num">05</div>
         <div class="what-card__icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <h4>Продвижение до чартов</h4>
-        <p>Работаю с питчингом в плейлисты, продвижением в соцсетях и органическим ростом прослушиваний после релиза.</p>
+        <p>Работаю с питчингом в плейлисты, продвижением в соцсетях и органическим ростом.</p>
       </div>
-      <div class="what-card">
+      <div class="what-card reveal">
         <div class="what-card__num">06</div>
         <div class="what-card__icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M7 4v16M17 4v16M3 8h4m10 0h4M3 16h4m10 0h4M7 12h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 4v16M17 4v16M3 8h4m10 0h4M3 16h4m10 0h4M7 12h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <h4>Музыка для медиа</h4>
-        <p>Создаю музыку для фильмов, игр, рилс, ютуб-роликов и подкастов. Любая длина, любое настроение, под ключ.</p>
+        <p>Создаю музыку для фильмов, игр, рилс, ютуб-роликов и подкастов. Любое настроение, под ключ.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- УСЛУГИ И ЦЕНЫ -->
+<!-- УСЛУГИ И ЦЕНЫ (светлый) -->
 <section class="services" id="services">
+  <span class="deco deco--pink" style="top:5%;right:2%;font-size:24px;transform:rotate(20deg);">✦</span>
+  <span class="deco" style="bottom:8%;left:1%;font-size:20px;transform:rotate(-15deg);">◇</span>
   <div class="container">
     <div class="section-header">
       <div class="section-tag">Услуги и цены</div>
-      <h2>Каталог услуг</h2>
+      <h2 id="pricing">Каталог услуг</h2>
       <p>Выберите формат — или напишите, если нужно что-то индивидуальное</p>
     </div>
     <div class="services__list">
 
-      <div class="service-item service-item--featured" id="pricing">
+      <div class="service-item service-item--featured reveal">
         <div class="service-item__left">
           <div class="service-item__num">01</div>
-          <div class="service-item__icon service-item__icon--main">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="service-item__icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           <div class="service-item__info">
             <div class="service-item__badge">Флагман</div>
             <h3>Песня под ключ</h3>
-            <p>Полный цикл: написание текста, музыки и аранжировки, запись, сведение, мастеринг, обложка, дистрибьюция на площадки и продвижение релиза. Один специалист — весь путь от идеи до релиза.</p>
+            <p>Полный цикл: написание текста, музыки и аранжировки, запись, сведение, мастеринг, обложка, дистрибьюция и продвижение релиза. Один специалист — весь путь от идеи до релиза.</p>
             <ul class="service-item__includes">
               <li>Текст + музыка с нуля или под вашу идею</li>
               <li>Аранжировка в нужном жанре</li>
@@ -206,16 +217,16 @@
         </div>
         <div class="service-item__right">
           <div class="service-item__price">от 14 990 ₽</div>
-          <div class="service-item__note">цена зависит от объёма работ</div>
-          <a href="#leadForm" class="btn btn--primary">Заказать</a>
+          <div class="service-item__note">цена зависит от объёма</div>
+          <a href="#leadForm" class="btn btn--pink">Заказать</a>
         </div>
       </div>
 
-      <div class="service-item">
+      <div class="service-item reveal">
         <div class="service-item__left">
           <div class="service-item__num">02</div>
           <div class="service-item__icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M9 17H5a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3M13 21l4-4m0 0l4-4m-4 4l-4-4m4 4V11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 17H5a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3M13 21l4-4m0 0l4-4m-4 4l-4-4m4 4V11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           <div class="service-item__info">
             <h3>Сведение и мастеринг</h3>
@@ -229,11 +240,11 @@
         </div>
       </div>
 
-      <div class="service-item">
+      <div class="service-item reveal">
         <div class="service-item__left">
           <div class="service-item__num">03</div>
           <div class="service-item__icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M7 4v16M17 4v16M3 8h4m10 0h4M3 16h4m10 0h4M7 12h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 4v16M17 4v16M3 8h4m10 0h4M3 16h4m10 0h4M7 12h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           <div class="service-item__info">
             <h3>Музыка под заказ</h3>
@@ -250,11 +261,11 @@
         </div>
       </div>
 
-      <div class="service-item">
+      <div class="service-item reveal">
         <div class="service-item__left">
           <div class="service-item__num">04</div>
           <div class="service-item__icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 4l16 16M4 20L20 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M12 12m-3 0a3 3 0 106 0 3 3 0 10-6 0" stroke="currentColor" stroke-width="1.8"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 4l16 16M4 20L20 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/></svg>
           </div>
           <div class="service-item__info">
             <h3>Переснятие минуса (перебивка SUNO)</h3>
@@ -268,11 +279,11 @@
         </div>
       </div>
 
-      <div class="service-item">
+      <div class="service-item reveal">
         <div class="service-item__left">
           <div class="service-item__num">05</div>
           <div class="service-item__icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           <div class="service-item__info">
             <h3>Создание аранжировки / минуса / бита</h3>
@@ -293,47 +304,43 @@
   </div>
 </section>
 
-<!-- ПРОЦЕСС -->
+<!-- ПРОЦЕСС (тёмный) -->
 <section class="process" id="process">
+  <span class="deco" style="top:8%;left:2%;font-size:60px;opacity:.04;color:#fff;">01</span>
+  <span class="deco deco--pink" style="bottom:8%;right:2%;font-size:30px;opacity:.15;">✦</span>
   <div class="container">
     <div class="section-header">
-      <div class="section-tag">Как это работает</div>
-      <h2>От заявки до релиза</h2>
+      <div class="section-tag section-tag--white">Как это работает</div>
+      <h2 style="color:#fff;">От заявки до релиза</h2>
     </div>
     <div class="process__steps">
-      <div class="process-step">
+      <div class="process-step reveal">
         <div class="process-step__num">01</div>
-        <div class="process-step__line"></div>
         <h4>Заявка и бриф</h4>
         <p>Пишете в Telegram или через форму. Обсуждаем идею, жанр, референсы, дедлайн и бюджет</p>
       </div>
-      <div class="process-step">
+      <div class="process-step reveal">
         <div class="process-step__num">02</div>
-        <div class="process-step__line"></div>
         <h4>Согласование</h4>
         <p>Я предлагаю концепцию, правки вносятся до старта. Фиксируем детали и предоплату</p>
       </div>
-      <div class="process-step">
+      <div class="process-step reveal">
         <div class="process-step__num">03</div>
-        <div class="process-step__line"></div>
         <h4>Производство</h4>
         <p>Пишу музыку / текст / аранжировку, делаю сведение и мастеринг. Присылаю демо на согласование</p>
       </div>
-      <div class="process-step">
+      <div class="process-step reveal">
         <div class="process-step__num">04</div>
-        <div class="process-step__line"></div>
         <h4>Правки</h4>
         <p>Одна итерация правок входит в стоимость. Вносим все корректировки до финального вида</p>
       </div>
-      <div class="process-step">
+      <div class="process-step reveal">
         <div class="process-step__num">05</div>
-        <div class="process-step__line"></div>
         <h4>Релиз</h4>
         <p>Выпускаю трек на площадки, настраиваю метаданные, готовлю обложку</p>
       </div>
-      <div class="process-step">
+      <div class="process-step reveal">
         <div class="process-step__num">06</div>
-        <div class="process-step__line" style="display:none"></div>
         <h4>Продвижение</h4>
         <p>Питчинг в плейлисты, работа с аудиторией, рост прослушиваний после релиза</p>
       </div>
@@ -341,45 +348,47 @@
   </div>
 </section>
 
-<!-- FAQ -->
+<!-- FAQ (светлый) -->
 <section class="faq" id="faq">
+  <span class="deco deco--pink" style="top:6%;right:3%;font-size:20px;transform:rotate(15deg);">◆</span>
+  <span class="deco" style="bottom:6%;left:2%;font-size:16px;transform:rotate(-10deg);">✦</span>
   <div class="container">
-    <div class="section-header">
+    <div class="section-header section-header--center">
       <div class="section-tag">Вопросы</div>
       <h2>Частые вопросы</h2>
     </div>
     <div class="faq__grid">
-      <div class="faq__item">
+      <div class="faq__item reveal">
         <details>
           <summary>Сколько времени занимает написание песни под ключ?</summary>
           <p>Обычно 7–14 рабочих дней от брифа до финального мастера. Сроки зависят от сложности проекта и загруженности. Срочный заказ возможен — обсуждаем отдельно.</p>
         </details>
       </div>
-      <div class="faq__item">
+      <div class="faq__item reveal">
         <details>
           <summary>Нужно ли мне иметь музыкальное образование или опыт?</summary>
           <p>Нет. Достаточно идеи, настроения или референса — я переведу это в музыку. Работаю с людьми без музыкального бэкграунда регулярно.</p>
         </details>
       </div>
-      <div class="faq__item">
+      <div class="faq__item reveal">
         <details>
           <summary>Кому принадлежат права на трек?</summary>
           <p>Вам. После финальной оплаты все авторские права на готовый продукт переходят к заказчику. Это фиксируется договором.</p>
         </details>
       </div>
-      <div class="faq__item">
+      <div class="faq__item reveal">
         <details>
           <summary>Что такое «перебивка SUNO»? Зачем это нужно?</summary>
           <p>SUNO и другие AI генерируют музыку, но она звучит синтетически, права на неё спорны, и площадки всё активнее её блокируют. Я переснимаю такой трек живой аранжировкой — получается реальная музыка с чистыми правами и профессиональным звуком.</p>
         </details>
       </div>
-      <div class="faq__item">
+      <div class="faq__item reveal">
         <details>
           <summary>На какие площадки выходит релиз?</summary>
           <p>Spotify, Apple Music, YouTube Music, ВКонтакте, Яндекс.Музыка, Deezer, Tidal и ещё 30+ платформ через дистрибьютора. Везде одновременно.</p>
         </details>
       </div>
-      <div class="faq__item">
+      <div class="faq__item reveal">
         <details>
           <summary>Можно ли заказать только сведение без мастеринга — или наоборот?</summary>
           <p>Да, услуги можно брать по отдельности. Напишите в форме или в Telegram, уточним детали и стоимость конкретно вашего проекта.</p>
@@ -389,16 +398,20 @@
   </div>
 </section>
 
-<!-- КОНТАКТЫ -->
+<!-- КОНТАКТЫ (тёмный) -->
 <section class="contact" id="contact">
+  <span class="deco deco--pink" style="top:6%;left:3%;font-size:22px;transform:rotate(-15deg);">✦</span>
+  <span class="deco" style="bottom:10%;right:3%;font-size:50px;opacity:.05;color:#fff;">♪</span>
   <div class="container">
     <div class="section-header">
-      <div class="section-tag">Связаться</div>
-      <h2>Обсудим ваш проект</h2>
-      <p>Опишите идею — отвечу быстро и предложу решение</p>
+      <div class="section-tag section-tag--pink">Связаться</div>
+      <h2 style="color:#fff;">Обсудим<br>ваш проект</h2>
+      <p style="color:#888;">Опишите идею — отвечу быстро и предложу решение</p>
     </div>
     <div class="contact__inner">
       <form class="form" id="leadForm" novalidate>
+        <div class="form__title">Оставить заявку</div>
+        <div class="form__subtitle">Отвечаю в течение нескольких часов</div>
         <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
         <div class="form__group">
           <label for="name">Ваше имя</label>
@@ -430,8 +443,8 @@
             <span>Я согласен(а) на <a href="privacy-policy.html" target="_blank">обработку персональных данных</a> в соответствии с <a href="privacy-consent.html" target="_blank">политикой конфиденциальности</a></span>
           </label>
         </div>
-        <button type="submit" class="btn btn--primary btn--full">Отправить заявку</button>
-        <p class="form__note">Отвечаю в течение нескольких часов. Первая консультация — бесплатно.</p>
+        <button type="submit" class="btn btn--pink btn--full">Отправить заявку →</button>
+        <p class="form__note">Первая консультация — бесплатно.</p>
       </form>
 
       <div class="contact__right">
@@ -439,12 +452,12 @@
           <div class="contact__cta-icon">🎛</div>
           <h3>Напишите напрямую</h3>
           <p>Быстрее всего — в Telegram. Обсудим проект, пришлю примеры работ и рассчитаю стоимость.</p>
-          <a href="https://t.me/malinstu" class="btn btn--primary" target="_blank" rel="noopener">Написать @malinstu</a>
+          <a href="https://t.me/malinstu" class="btn btn--pink" target="_blank" rel="noopener">Написать @malinstu →</a>
         </div>
         <div class="contact__socials">
           <a class="social-link" href="https://t.me/malinstudio" target="_blank" rel="noopener">
             <div class="social-link__icon social-link__icon--tg">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21.5 2.5L2 10l7 2.5M21.5 2.5l-5.5 19-7-9M21.5 2.5L9 12.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21.5 2.5L2 10l7 2.5M21.5 2.5l-5.5 19-7-9M21.5 2.5L9 12.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             <div>
               <div class="social-link__label">Telegram-канал</div>
@@ -453,7 +466,7 @@
           </a>
           <a class="social-link" href="https://www.instagram.com/malin.mus" target="_blank" rel="noopener">
             <div class="social-link__icon social-link__icon--ig">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
             </div>
             <div>
               <div class="social-link__label">Instagram</div>
@@ -462,7 +475,7 @@
           </a>
           <a class="social-link" href="https://vk.com/malinstu" target="_blank" rel="noopener">
             <div class="social-link__icon social-link__icon--vk">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M2 7h4c.5 0 .9.3 1.1.7L9 11.5l2-4.8c.2-.4.6-.7 1.1-.7H16M2 7l3.5 9.5H8L9.5 13l1.5 3.5h2.5c-.5-2.5-2-5-2-5M17 7v9.5M17 7c0 0 4.5 0 5 5.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M2 7h4c.5 0 .9.3 1.1.7L9 11.5l2-4.8c.2-.4.6-.7 1.1-.7H16M2 7l3.5 9.5H8L9.5 13l1.5 3.5h2.5c-.5-2.5-2-5-2-5M17 7v9.5M17 7c0 0 4.5 0 5 5.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             <div>
               <div class="social-link__label">ВКонтакте</div>
@@ -471,7 +484,7 @@
           </a>
           <a class="social-link" href="https://tenchat.ru/malinstudio" target="_blank" rel="noopener">
             <div class="social-link__icon social-link__icon--tc">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="4" rx="2" stroke="currentColor" stroke-width="1.7"/><rect x="3" y="10" width="11" height="4" rx="2" stroke="currentColor" stroke-width="1.7"/><rect x="3" y="16" width="15" height="4" rx="2" stroke="currentColor" stroke-width="1.7"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="4" rx="2" stroke="currentColor" stroke-width="1.7"/><rect x="3" y="10" width="11" height="4" rx="2" stroke="currentColor" stroke-width="1.7"/><rect x="3" y="16" width="15" height="4" rx="2" stroke="currentColor" stroke-width="1.7"/></svg>
             </div>
             <div>
               <div class="social-link__label">TenChat</div>
@@ -480,7 +493,7 @@
           </a>
           <a class="social-link" href="https://dzen.ru/id/67be977553a4ad4f9afe2cda" target="_blank" rel="noopener">
             <div class="social-link__icon social-link__icon--dz">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M9 7.5h4.5a4.5 4.5 0 010 9H9V7.5z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M9 7.5h4.5a4.5 4.5 0 010 9H9V7.5z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             <div>
               <div class="social-link__label">Дзен</div>
@@ -489,7 +502,7 @@
           </a>
           <a class="social-link" href="https://setka.ru/users/9396e66f-b150-42c9-8cd2-9aad5ac309b7" target="_blank" rel="noopener">
             <div class="social-link__icon social-link__icon--sk">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="7" cy="7" r="3" stroke="currentColor" stroke-width="1.7"/><circle cx="17" cy="7" r="3" stroke="currentColor" stroke-width="1.7"/><circle cx="7" cy="17" r="3" stroke="currentColor" stroke-width="1.7"/><circle cx="17" cy="17" r="3" stroke="currentColor" stroke-width="1.7"/><path d="M10 7h4M7 10v4M17 10v4M10 17h4" stroke="currentColor" stroke-width="1.4"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="7" cy="7" r="3" stroke="currentColor" stroke-width="1.7"/><circle cx="17" cy="7" r="3" stroke="currentColor" stroke-width="1.7"/><circle cx="7" cy="17" r="3" stroke="currentColor" stroke-width="1.7"/><circle cx="17" cy="17" r="3" stroke="currentColor" stroke-width="1.7"/><path d="M10 7h4M7 10v4M17 10v4M10 17h4" stroke="currentColor" stroke-width="1.4"/></svg>
             </div>
             <div>
               <div class="social-link__label">Сетка</div>
@@ -506,7 +519,7 @@
 <footer class="footer">
   <div class="container footer__inner">
     <div class="footer__logo">
-      <img src="logo.jpg" alt="MALIN STUDIO logo" style="height:38px;width:auto;mix-blend-mode:multiply;">
+      <img src="logo.jpg" alt="MALIN STUDIO" style="height:36px;width:auto;filter:invert(1);">
       <div>
         <div class="footer__name">MALIN STUDIO</div>
         <div class="footer__sub">music production · от идеи до релиза</div>
@@ -519,12 +532,12 @@
       <a href="https://tenchat.ru/malinstudio" target="_blank" rel="noopener">TenChat</a>
       <a href="https://dzen.ru/id/67be977553a4ad4f9afe2cda" target="_blank" rel="noopener">Дзен</a>
     </div>
-    <div class="footer__docs" style="width:100%;display:flex;flex-wrap:wrap;gap:14px;margin-top:12px;padding-top:16px;border-top:1px solid var(--border);">
-      <a href="privacy-consent.html" style="font-size:12px;color:var(--text-3);">Согласие на обработку персональных данных</a>
-      <a href="privacy-policy.html" style="font-size:12px;color:var(--text-3);">Политика об обработке персональных данных</a>
-      <a href="public-offer.html" style="font-size:12px;color:var(--text-3);">Публичная оферта</a>
-      <a href="cookie-policy.html" style="font-size:12px;color:var(--text-3);">Политика Cookies</a>
-      <a href="cookie-agreement.html" style="font-size:12px;color:var(--text-3);">Соглашение об использовании Cookie</a>
+    <div class="footer__docs">
+      <a href="privacy-consent.html">Согласие на обработку персональных данных</a>
+      <a href="privacy-policy.html">Политика об обработке персональных данных</a>
+      <a href="public-offer.html">Публичная оферта</a>
+      <a href="cookie-policy.html">Политика Cookies</a>
+      <a href="cookie-agreement.html">Соглашение об использовании Cookie</a>
     </div>
     <p class="footer__copy">© <span id="year"></span> MALIN STUDIO</p>
   </div>
